@@ -1,0 +1,57 @@
+/*************** GENERAL CSS ***************/
+html,
+body,
+.dropdown-menu li a {
+    background: #FFF;
+    font-size: 16px;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #666;
+}
+
+.navbar-nav {
+    margin: 10px 0;
+}
+
+.navbar .navbar-brand img {
+    height: 50px;
+}
+
+a,
+.btn-default,
+.block-default {
+    color: #5C6AC1;
+    font-weight: 700;
+}
+
+a:hover,
+a:focus,
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+    color: #475194;
+}
+
+.h1,
+h1,
+.h2,
+h2,
+.h3,
+h3,
+.h4,
+.h5,
+.h6,
+h4,
+h5,
+h6,
+strong {
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 700 !important;
+    color: #000;
+}
+
+.panel-default {
+    border-radius: 12px;
+    border-color: #D4D4D4;
+}
