@@ -42,7 +42,7 @@
                     Your prize has been added to your Ipsos iSay account. <br />
                     Play again tomorrow for another chance to win!
                   </p>
-                  <a class="btn btn-primary px-4 mt-4 me-3" href="/p1/spinningwheel/intro">
+                  <a class="btn btn-primary px-4 mt-4 me-3" href="index.html">
                     Go to main page
                   </a>
               
@@ -76,26 +76,31 @@
       </footer>
     </div>
 
-<style>
-  footer .nav.navbar-nav {
-    display: flex;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 700;
-  }
+    <button type="button" class="btn btn-sm btn-primary btn-variants" data-bs-toggle="modal" data-bs-target="#variantsModal">
+      + Variants
+    </button>
 
-  footer .nav-item {
-    display: inline-block;
-    margin: 0 5px; /* Espacio entre los enlaces */
-  }
-
-  footer .nav.navbar-nav {
-    display: block;
-    text-align: left;
-  }
-
-  
-</style>
+    <!-- JUST FOR THE PROTOTYPE: Not used in production -->
+    <!-- Modal -->
+    <div class="modal fade" id="variantsModal" tabindex="-1" aria-labelledby="variantsModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="variantsModalLabel">More variants</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <ul>
+                      <li><a class="dropdown-item" href="results_incentive_points.html">Incentive Points <small>(this page)</small></a></li>
+                      <li><a class="dropdown-item" href="results_incentive_giftcard.html">Incentive Gift Card</a></li>
+                      <li><a class="dropdown-item" href="results_incentive_noincentive.html">No incentive</a></li>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   </body>
