@@ -4,7 +4,7 @@
 
 html, body {
     font-family: 'Inter', Arial, sans-serif;
-    color: #3A405F !important;
+    color: #767279 !important;
     height: 100%;
 }
 
@@ -81,6 +81,10 @@ h1.h2 {
     color: #666;
 }
 
+.text-primary {
+    color: #2f469c !important;
+}
+
 .text-secondary {
     color: #84329b !important;
 }
@@ -92,6 +96,33 @@ h1.h2 {
 .dotted {
     border-bottom: 1px dotted #e0e0e0;
 }
+
+.dotted-line {
+    border: none; border-top: 2px dotted #939096;
+    margin: 24px 0
+}
+
+a.btn-gray  {
+    color: #59545C !important;
+    background: #F6F6F6;
+}
+
+a.btn-gray:hover  {
+    background: #E0E0E0;
+}
+
+a.btn-gray:focus  {
+    border: 2px solid #E0E0E0;
+}
+
+a.btn-gray:active  {
+    background: #E0E0E0;
+}
+
+.text-muted {
+    color: #767279 !important;
+}
+
 
 /********** Footer **********/
 
@@ -132,18 +163,18 @@ footer .nav.navbar-nav {
   }
 }
 
-  .wheel {
-    max-width: 325px;
-    max-height: 325px;
-  }
+.wheel {
+max-width: 325px;
+max-height: 325px;
+}
 
 
-  /********** Results **********/
+/********** Results **********/
 
-  .alert.alert-success {
+.alert.alert-success {
     background: #f4fffb;
     border: none;
-  }
+}
 
 
 .alert.alert-primary {
@@ -154,8 +185,6 @@ footer .nav.navbar-nav {
 .text-success-plus-2 {
     color: #0f4e37 !important;
 }
-
-
 
 /****************** JUST FOR THE PROTOTYPE: Not used in production ******************/
 .btn-variants {
