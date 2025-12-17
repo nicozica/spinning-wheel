@@ -193,3 +193,140 @@ max-height: 325px;
     right: 5px;
     border: 1px solid #FAFAFA;
 }
+
+
+/* ============================================================== */
+/* Custom Checkbox Styling (iCheck-like) */
+/* ============================================================== */
+
+/* CSS Variables for easy theming */
+:root {
+    --checkbox-primary: #2f3cc0;
+    --checkbox-primary-hover: #252f9a;
+    --checkbox-size: 24px;
+    --checkbox-border-radius: 4px;
+    --checkbox-border-color: #d1d5db;
+    --checkbox-checkmark-color: #ffffff;
+}
+
+/* Agreement container - clickable area with visual prominence */
+.tc-agree {
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    background: rgba(47, 60, 192, 0.03);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.tc-agree:hover {
+    background: rgba(47, 60, 192, 0.06);
+    border-color: rgba(47, 60, 192, 0.2);
+}
+
+/* Custom checkbox - hidden native input */
+.custom-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: var(--checkbox-size);
+    height: var(--checkbox-size);
+    min-width: var(--checkbox-size);
+    min-height: var(--checkbox-size);
+    margin-top: 0.125rem;
+    margin-right: 0;
+    border: 2px solid var(--checkbox-border-color);
+    border-radius: var(--checkbox-border-radius);
+    background-color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
+}
+
+/* Hover state */
+.custom-checkbox:hover {
+    border-color: var(--checkbox-primary);
+    box-shadow: 0 0 0 3px rgba(47, 60, 192, 0.08);
+}
+
+/* Focus state for keyboard navigation */
+.custom-checkbox:focus-visible {
+    outline: none;
+    border-color: var(--checkbox-primary);
+    box-shadow: 0 0 0 4px rgba(47, 60, 192, 0.25);
+}
+
+/* Checked state - background color */
+.custom-checkbox:checked {
+    background-color: var(--checkbox-primary);
+    border-color: var(--checkbox-primary);
+}
+
+.custom-checkbox:checked:hover {
+    background-color: var(--checkbox-primary-hover);
+    border-color: var(--checkbox-primary-hover);
+}
+
+/* Animated checkmark using ::after pseudo-element */
+.custom-checkbox::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 12px;
+    border: solid var(--checkbox-checkmark-color);
+    border-width: 0 2.5px 2.5px 0;
+    transform: translate(-50%, -60%) rotate(45deg) scale(0);
+    opacity: 0;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Show checkmark when checked */
+.custom-checkbox:checked::after {
+    transform: translate(-50%, -60%) rotate(45deg) scale(1);
+    opacity: 1;
+}
+
+/* Disabled state */
+.custom-checkbox:disabled {
+    background-color: #f3f4f6;
+    border-color: #d1d5db;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.custom-checkbox:disabled:checked {
+    background-color: #9ca3af;
+    border-color: #9ca3af;
+}
+
+/* Label styling */
+.form-check-label {
+    padding-left: 0.75rem;
+    line-height: 1.5;
+    cursor: pointer;
+    user-select: none;
+    display: inline-block;
+}
+
+/* Ensure links inside label don't trigger checkbox toggle */
+.form-check-label a.terms-link {
+    color: var(--checkbox-primary);
+    text-decoration: underline;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.form-check-label a.terms-link:hover {
+    color: var(--checkbox-primary-hover);
+    text-decoration: none;
+}
+
+/* Error message styling */
+#termsError {
+    font-size: 0.875rem;
+    margin-left: calc(var(--checkbox-size) + 0.75rem);
+}
