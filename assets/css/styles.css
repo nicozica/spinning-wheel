@@ -36,9 +36,9 @@ button, a.btn {
 
 }
 
-a.navbar-brand img{
+a.navbar-brand img {
     width: 150px;
-    height: 59px!;
+    height: 59px;
 }
 
 button.btn-primary, a.btn-primary {
@@ -186,15 +186,6 @@ max-height: 325px;
     color: #0f4e37 !important;
 }
 
-/****************** JUST FOR THE PROTOTYPE: Not used in production ******************/
-.btn-variants {
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
-    border: 1px solid #FAFAFA;
-}
-
-
 /* ============================================================== */
 /* Custom Checkbox Styling (iCheck-like) */
 /* ============================================================== */
@@ -330,3 +321,13 @@ max-height: 325px;
     font-size: 0.875rem;
     margin-left: calc(var(--checkbox-size) + 0.75rem);
 }
+
+/****************** JUST FOR THE PROTOTYPE: Not used in production ******************/
+.btn-variants {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    border: 1px solid #FAFAFA;
+}
+
+
